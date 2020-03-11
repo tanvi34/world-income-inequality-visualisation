@@ -1,1 +1,125 @@
-Hello World
+<!DOCTYPE html>
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <script src="https://d3js.org/d3.v5.js"></script>
+  <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+  <script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
+  <script src="lib/billboard.min.js"></script>
+  <script src="lib/d3-tip.js"></script>
+
+  <script src="script.js" defer></script>
+
+  <link rel="stylesheet" type="text/css" href="lib/billboard.min.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Inequality per country</title>
+</head>
+
+<body>
+  <center>
+    <br>
+    <h2>WORLD INCOME INEQUALITY</h2>
+    <br>
+      <h4>Global income inequality increased for 2 centuries and <font color="green">is now falling.</font><br> </h4> 
+      
+      <h5>Good to know, right? Want to know more about how has income inequality within countries been changing around the world more generally? Use the visualisation below</h5>
+    </center>
+<div class="originalBody">
+  <aside>
+    
+
+    <section>
+      <h2 id="info-title"></h2>
+      <div id="info-text"></div>
+
+    </section>
+
+    <section>
+      <h2 id="country-title"></h2>
+      <!--button id="button1" onclick="reset()">Reset</button-->
+      <div id="country-text"></div>
+
+      <div id="pie-chart"></div>
+    </section>
+
+
+  </aside>
+
+
+  <main>
+    <header>
+      <input type="range" min="1800" max="2020" value="2000" id="slider">
+      
+      <div class="right">
+        <h1 id="selected-year">2000</h1>
+        <p id="year-avg"></p>
+      </div>
+    </header>
+
+    <div class="map">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="260 -10 540 370"></svg>
+    </div>
+    <p>Source: <a href="https://data.worldbank.org/indicator/SI.POV.GINI">The World Bank</a>, retrieved Feb. 2020.</p>
+    <div id="legend">
+      <div class="l-0" style="background: #bbb;">No data</div>
+    </div>
+    <button id="button2" onclick="reset()"><i class="fa fa-refresh">&nbsp;&nbsp;Reset</i></button>
+
+
+  </main>
+</div>
+
+  <br>
+  <center>
+    <hr>
+    <h4>
+      <font color="#fb6a4a">Comparison of World's Richest and Poorest Countries</font>
+    </h4>  
+  </center>
+  <h5>The Gini Coefficient has increased and decreased for different countries irrespective of their richness. This is evident in below line chart. <font color="#336600">Green</font> highlights the richest countries, <font color="#CC0000">Red</font> highlights the poorest countries and <font color="#FF9933">Yellow</font> highlights the countries in between.</h5>
+  <center>
+  <div id='lineChart'></div>
+  <br>
+  
+  <h4><font color="#fb6a4a">What's the conclusion?</font></h4> 
+  </center>
+
+  <h6><font color="#fb6a4a"> 1) No general trend to higher inequality</font></h6>
+  <br>
+  <h5>It's a mistake to think that inequality is rising everywhere. Over the last 25 years, inequality has gone up in many countries and has fallen in many others. It's important to know this. It shows that rising inequality is not ubiquitous, nor inevitable in the face of globalisation, and suggests that politics and policy at the level of individual countries can make a difference.</h5>
+
+  <h6><font color="#fb6a4a"> 2) Note the diversity between countries  </font></h6>
+  <br>
+  <h5>It's a mistake to think that inequality is rising everywhere. Over the last 25 years, inequality has gone up in many countries and has fallen in many others. It's important to know this. It shows that rising inequality is not ubiquitous, nor inevitable in the face of globalisation, and suggests that politics and policy at the level of individual countries can make a difference.</h5>
+
+  <h6><font color="#fb6a4a">3) There are clear regional patterns</font></h6>
+  <br>
+  <h5>It's a mistake to think that inequality is rising everywhere. Over the last 25 years, inequality has gone up in many countries and has fallen in many others. It's important to know this. It shows that rising inequality is not ubiquitous, nor inevitable in the face of globalisation, and suggests that politics and policy at the level of individual countries can make a difference.</h5>
+
+  <h6><font color="#fb6a4a">  4) Across countries, the average level of inequality has not changed</font></h6>
+  <br>
+  <h5>It's a mistake to think that inequality is rising everywhere. Over the last 25 years, inequality has gone up in many countries and has fallen in many others. It's important to know this. It shows that rising inequality is not ubiquitous, nor inevitable in the face of globalisation, and suggests that politics and policy at the level of individual countries can make a difference.</h5>
+  <center>
+  <h4>SOME QUICK FACTS</h4>
+  <div class="row">
+    <div class="column">
+      <img src="images/1.jpeg" width="250" height="250">
+    </div>
+    <div class="column">
+      <img src="images/2.jpeg" width="250" height="250">
+    </div>
+    <div class="column">
+      <img src="images/3.jpeg" width="250" height="250">
+    </div>
+    <div class="column">
+      <img src="images/4.jpeg" width="250" height="250">
+    </div>
+  </div>
+
+  
+</center>
+</body>
+
+</html>
