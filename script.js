@@ -300,7 +300,7 @@ function initSidebar() {
   var parent = document.getElementById('info-text')
   parent.innerText = startPageText
   parent.innerHTML +=
-    '<br /><br /><i>"If we are concerned about equality of opportunity tomorrow, we need to be concerned about inequality of outcome today"</i><span style="float:right; margin-top: 10px">- Anthony B. Atkinson</span>'
+    '<br /><br /><i><b>The map is interactive. You can  you the slider to select different years and click on specific countries.</b></i>'
 
   cTitle = document.getElementById('country-title')
   cTitle.innerText = 'Country details'

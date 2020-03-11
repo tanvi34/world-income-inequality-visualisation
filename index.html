@@ -20,9 +20,9 @@
 <body>
   <center>
     <br>
-    <h2>WORLD INCOME INEQUALITY</h2>
+    <font  style="font-family:Quattrocento;" size="7px">WORLD INCOME INEQUALITY</font>
     <br>
-      <h4>Global income inequality increased for 2 centuries and <font color="green">is now falling.</font><br> </h4> 
+      <h4>Global income inequality increased for 2 centuries and <font color="green">is now falling.</font> </h4> 
       
       <h5>Good to know, right? Want to know more about how has income inequality within countries been changing around the world more generally? Use the visualisation below</h5>
     </center>
@@ -59,67 +59,86 @@
     </header>
 
     <div class="map">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="260 -10 540 370"></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="210 -6 540 360"></svg>
     </div>
-    <p>Source: <a href="https://data.worldbank.org/indicator/SI.POV.GINI">The World Bank</a>, retrieved Feb. 2020.</p>
+    <p>Source: <a href="https://www.gapminder.org/tools/#$state$marker$hook$data=data_fasttrack&which=gini&scaleType=linear&spaceRef:null;;;&chart-type=spreadsheet">Gap Minder</a>, retrieved Feb. 2020.</p>
     <div id="legend">
       <div class="l-0" style="background: #bbb;">No data</div>
     </div>
     <button id="button2" onclick="reset()"><i class="fa fa-refresh">&nbsp;&nbsp;Reset</i></button>
 
-
+    
   </main>
 </div>
-
+<div class="backgroundBox">
   <br>
   <center>
-    <hr>
+  
     <h4>
       <font color="#fb6a4a">Comparison of World's Richest and Poorest Countries</font>
     </h4>  
   </center>
   <h5>The Gini Coefficient has increased and decreased for different countries irrespective of their richness. This is evident in below line chart. <font color="#336600">Green</font> highlights the richest countries, <font color="#CC0000">Red</font> highlights the poorest countries and <font color="#FF9933">Yellow</font> highlights the countries in between.</h5>
+  <div id="note"><i><font color="#fb6a4a">**Note:</font> The line chart is interactive. You can also select the legend to view a particular country</i></div>
+  <br>
   <center>
   <div id='lineChart'></div>
-  <br>
-  
-  <h4><font color="#fb6a4a">What's the conclusion?</font></h4> 
+  <p><font size="4px">Source: <a href="https://www.gapminder.org/tools/#$state$marker$hook$data=data_fasttrack&which=gini&scaleType=linear&spaceRef:null;;;&chart-type=spreadsheet">Gap Minder</a>, retrieved Feb. 2020.</font></p>
   </center>
-
-  <h6><font color="#fb6a4a"> 1) No general trend to higher inequality</font></h6>
+</div>
   <br>
-  <h5>It's a mistake to think that inequality is rising everywhere. Over the last 25 years, inequality has gone up in many countries and has fallen in many others. It's important to know this. It shows that rising inequality is not ubiquitous, nor inevitable in the face of globalisation, and suggests that politics and policy at the level of individual countries can make a difference.</h5>
-
-  <h6><font color="#fb6a4a"> 2) Note the diversity between countries  </font></h6>
+  <div class="backgroundBox">
+    <center>
+  <h4><font color="#fb6a4a">What is the conclusion?</font></h4> 
+  </center>
+  <h6> 1) No general trend to higher inequality</h6>
   <br>
-  <h5>It's a mistake to think that inequality is rising everywhere. Over the last 25 years, inequality has gone up in many countries and has fallen in many others. It's important to know this. It shows that rising inequality is not ubiquitous, nor inevitable in the face of globalisation, and suggests that politics and policy at the level of individual countries can make a difference.</h5>
-
-  <h6><font color="#fb6a4a">3) There are clear regional patterns</font></h6>
-  <br>
-  <h5>It's a mistake to think that inequality is rising everywhere. Over the last 25 years, inequality has gone up in many countries and has fallen in many others. It's important to know this. It shows that rising inequality is not ubiquitous, nor inevitable in the face of globalisation, and suggests that politics and policy at the level of individual countries can make a difference.</h5>
-
-  <h6><font color="#fb6a4a">  4) Across countries, the average level of inequality has not changed</font></h6>
-  <br>
-  <h5>It's a mistake to think that inequality is rising everywhere. Over the last 25 years, inequality has gone up in many countries and has fallen in many others. It's important to know this. It shows that rising inequality is not ubiquitous, nor inevitable in the face of globalisation, and suggests that politics and policy at the level of individual countries can make a difference.</h5>
-  <center>
-  <h4>SOME QUICK FACTS</h4>
-  <div class="row">
-    <div class="column">
-      <img src="images/1.jpeg" width="250" height="250">
-    </div>
-    <div class="column">
-      <img src="images/2.jpeg" width="250" height="250">
-    </div>
-    <div class="column">
-      <img src="images/3.jpeg" width="250" height="250">
-    </div>
-    <div class="column">
-      <img src="images/4.jpeg" width="250" height="250">
-    </div>
+  <div id="conclusion">It's a mistake to think that inequality is rising everywhere. Over the last 25 years, inequality has gone up in many countries and has fallen in many others. It's important to know this. It shows that rising inequality is not ubiquitous, nor inevitable in the face of globalisation, and suggests that politics and policy at the level of individual countries can make a difference.
   </div>
 
+  <h6> 2) Across countries, the average level of inequality has not changed</h6>
+  <br>
+  <div id="conclusion">The rises and falls seen in the Gini index in different countries more or less cancel out, the average Gini across countries fell marginally from 39.6 to 38.6.
+    
+    There were slight rises in some countries like USA, Ethopia and also slight falls in some countries like China and Ireland.
+  </div>
+
+  <h6> 3) Cannot make generalisations about inequality across the globe</h6>
+  <br>
+  <div id="conclusion">
+    It is difficult to make generalisations about inequality across the globe based on what we see in rich countries. Nor should we limit ourselves to thinking inequality must either be going up or going down. Whether inequality is rising or falling depends on where, when and what aspect of inequality we have in mind.
+  </div>
+  <br>
+  <br>
+  </div>
+<br>
+  <center>
   
+  <h4><font color="#fb6a4a">Should we  still care? Here are some quick facts</font></h4>
+  <div class="row">
+    <div class="column" id="facts">
+      <img src="images/1.png" width="390" height="250">
+    </div>
+    <div class="column" id="facts">
+      <img src="images/2.png" width="390" height="250">
+    </div>
+    <div class="column" id="facts">
+      <img src="images/3.png" width="390" height="250">
+    </div>
+    <div class="column" id="facts"> 
+      <img src="images/4.png" width="390" height="250">
+    </div>
+  </div>
+<br>
+  <div id="conclusion">
+  <b><i>If we are concerned about equality of opportunity tomorrow, we need to be concerned about inequality of outcome today"</i></b>><br>- Anthony B. Atkinson
+<br><br>
+  
+</div>
 </center>
+
+
+
 </body>
 
 </html>
