@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css?family=Quattrocento');
+
+.originalBody {
+  user-select:none;
+  display: flex;
+  font-family: 'Open-sans', arial;
+  flex-direction: row;
+  font-size: 20px;
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+  text-align: center;
+  padding-top: 20px;
+  color: rgb(32, 32, 32);
+}
+
+hgroup > * {
+  margin: 0;
+}
+h1 {
+  font-size: 6em;
+  margin: 0;
+  color: rgb(165, 15, 21);
+}
+h2 {
+  font-size: 40px;
+  margin: 0;
+  white-space: nowrap;
+}
+h4 {
+  font-size: 2em;
+  font-family: Quattrocento;
+
+}
+h5 {
+  font-size: 1.3em;
+  font-family: Quattrocento;
+  margin-left: 45px;
+}
+
+h6 {
+  font-size: 1.6em;
+  font-family: Quattrocento;
+  margin-left: 45px;
+  margin-bottom: -40px;
+  
+
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 33.33%;
+  padding: 5px;
+}
+aside {
+  text-align: left;
+  flex: 1;
+  align-self: flex-start;
+  justify-self: flex-start;
+  padding: 20px;
+  word-wrap: break-word;
+  margin-right: 20px;
+  max-width: 420px;
+}
+aside header {
+  padding-top: 22px;
+  background: white;
+}
+aside > section{
+  position: relative;
+  margin: 30px 0;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  border-radius: 20px;
+}
+
+aside > section > h2 {
+  margin-bottom: 20px;
+  color: rgb(251, 106, 74);
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+aside > section span.bigger {
+  font-weight: bold;
+  font-size: 36px;
+  margin-top: 5px;
+}
+
+aside > section p {
+  display: flex;
+  align-items:flex-start;
+  flex-direction: column;
+  height: 60px;
+  border-bottom: 3px solid #ddd;
+  padding-bottom: 5px;
+}
+
+.bb-legend-item-The-rest {
+  visibility: hidden !important;
+}
+
+header,
+aside {
+  font-family: Quattrocento;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 10px;
+  align-items: center;
+}
+
+/* All direct children of header has no vertical margin */
+header > * {
+  margin: 0 0.5em;
+}
+
+.right {
+  max-width: 15%; /* fixes dynamic slider width smaller devices */
+  width: 20%; /* -||- larger devices */
+  text-align: right;
+}
+
+.right #year-avg {
+  white-space: nowrap;
+  margin: 8px;
+  margin-top: -20px;
+}
+
+main {
+  position: relative;
+}
+
+#legend {
+  display: flex;
+  position: absolute;
+  top: 200px;
+  right: -120px;
+  width: 300px;
+}
+
+#legend > div {
+  flex: 1;
+  height: 0px;
+  margin: 0 1px;
+  padding-top: 12px;
+  font-size: 14px;
+}
+
+/* Map */
+main .map {
+  position: relative;
+  width: 56vw;
+}
+
+.map button {
+  cursor: pointer;
+  background-color: black;
+  opacity: 0.7;
+  padding: 10px;
+  font-size: 20px;
+  color: white;
+  border: 0;
+  position: absolute;
+  bottom: 30%;
+  right: 0;
+}
+
+.map button:hover {
+  opacity: 0.9;
+}
+
+.country {
+  cursor: pointer;
+  stroke: #fff;
+  stroke-width: 0.4px;
+}
+
+.map {
+  overflow: hidden;
+}
+
+.country:hover {
+  opacity: 0.7;
+}
+
+.d3-tip {
+  line-height: 1;
+  padding: 12px;
+  background: rgba(43, 43, 43, 0.8);
+  color: #fff;
+  border-radius: 2px;
+}
+
+/* Slider */
+#slider {
+  margin: 50px 0;
+  -webkit-appearance: none;
+  width: 100%;
+  height: 50px;
+  background: #ddd;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.5s;
+}
+
+#slider:hover {
+  opacity: 1;
+}
+
+#slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 100px;
+  background: rgba(203, 24, 29);
+  cursor: pointer;
+}
+
+#slider::-moz-range-thumb {
+  width: 25px;
+  height: 100px;
+  background: rgba(203, 24, 29);
+  cursor: pointer;
+}
+
+#button1 {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  background-image: linear-gradient(to top left, rgb(32, 32, 32), rgb(83, 83, 83));
+  color: white;
+
+  padding: 10px;
+  font-size: 20px;
+  border: 0;
+  border-radius: 10px;
+  box-shadow: 3px 3px 3px rgba(0,0,0,0.1);
+  opacity: 0.7;
+
+  font-weight: bold;
+  visibility: hidden;
+}
+
+#button2 {
+  position: absolute;
+  left: 1px;
+  margin-bottom: 435px;
+  cursor: pointer;
+  background-color:  rgb(255, 255, 255);
+  color: black;
+
+  padding: 10px;
+  font-size: 23px;
+  border-color: black;
+  border-radius: 10px;
+  box-shadow: 3px 3px 3px rgba(0,0,0,0.1);
+  opacity: 0.7;
+  font-family: Quattrocento;
+  font-weight: bold;
+  visibility: hidden;
+}
+
+button:hover {
+  opacity:1;
+
+}
+
+main button {
+  bottom: 33%;
+  font-size: 1.6em;
+  top: auto;
+}
