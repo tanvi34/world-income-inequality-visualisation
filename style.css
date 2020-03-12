@@ -13,6 +13,10 @@
   padding-top: 20px;
   color: rgb(32, 32, 32);
 }
+#gin{
+  float: right;
+  margin-top: -10px;
+}
 
 #conclusion {
   margin-left: 45px;
@@ -280,7 +284,7 @@ main .map {
 #button2 {
   position: absolute;
   left: 1px;
-  margin-bottom: 435px;
+  margin-bottom: 490px;
   cursor: pointer;
   background-color:  rgb(255, 255, 255);
   color: black;

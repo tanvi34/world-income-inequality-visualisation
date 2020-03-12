@@ -1,1 +1,1 @@
-[Demo](https://oskery.github.io/inequality-d3/)
+[Demo](https://tanvi34.github.io/world-income-inequality-visualisation/)

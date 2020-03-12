@@ -14,7 +14,7 @@
   <link rel="stylesheet" type="text/css" href="lib/billboard.min.css">
   <link rel="stylesheet" type="text/css" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <title>Inequality per country</title>
+  <title>World Income Inequality</title>
 </head>
 
 <body>
@@ -50,18 +50,22 @@
 
   <main>
     <header>
+      <div id="sstart"><b><font color="#fb6a4a">1800</font></b></div>
       <input type="range" min="1800" max="2020" value="2000" id="slider">
-      
+      <div id="sstop"><b><font color="#fb6a4a">2020</font></b></div>
       <div class="right">
         <h1 id="selected-year">2000</h1>
         <p id="year-avg"></p>
+       
       </div>
     </header>
+    <div id="gin"><font size="3px"> 0 = Total Equality<br> 100 = Total Inequality<br> </font></div>
 
     <div class="map">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="210 -6 540 360"></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="210 -6 540 340"></svg>
     </div>
     <p>Source: <a href="https://www.gapminder.org/tools/#$state$marker$hook$data=data_fasttrack&which=gini&scaleType=linear&spaceRef:null;;;&chart-type=spreadsheet">Gap Minder</a>, retrieved Feb. 2020.</p>
+   
     <div id="legend">
       <div class="l-0" style="background: #bbb;">No data</div>
     </div>

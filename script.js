@@ -4,9 +4,9 @@ var maxYear = 2020
 var legendValues = [0, 30, 40, 50, 60]
 var minVal = 24 // Not used atm
 var maxVal = 64 // Not used atm
-var title = 'How it works'
+var title = 'About the map'
 var startPageText =
-  'This visualization present how income inequality has changed over time, and how the levels of inequality in different countries can vary significantly. \n\n The inequality is measured through the Gini coefficient. The value ranges from 0 to 100, where 0 equals total equality and 100 total inequality.'
+  'This  map visualization present how income inequality has changed over time, and how the levels of inequality in different countries can vary significantly. \n\nThe inequality is measured through the Gini coefficient where the value ranges from 0 to 100.'
 
 // Creates yearspan and retrieves active year
 var yearSpan = [...Array(maxYear - minYear).keys()]
@@ -147,6 +147,7 @@ function drawMap() {
       if (!selectedCountry) tip.hide(d)
     })
     .on('click', clickedCountry)
+
     // set the color of each country
     .attr('fill', function(d) {
       d.total =
@@ -174,7 +175,6 @@ for (var i = 0; i < legendValues.length; i++) {
   legend.appendChild(element)
 }
 
-
 // Draw on map
 function reFillMap() {
   svg.selectAll('path').attr('fill', function(d) {
@@ -185,9 +185,7 @@ function reFillMap() {
   })
   getAvg()
   var button1 = document.getElementsByTagName('button')[0]
-  var button2 = document.getElementsByTagName('button')[1]
   button1.style.visibility = 'hidden'
-  button2.style.visibility = 'hidden'
 }
 
 // Change color on active country
@@ -210,7 +208,6 @@ function clickedCountry(d) {
   var element = document.getElementById('country-title')
   element.innerText = selectedCountry
   var button1 = document.getElementsByTagName('button')[0]
-  var button2 = document.getElementsByTagName('button')[1]
 
   if (copy == d.properties.name) {
     reFillMap()
@@ -222,7 +219,6 @@ function clickedCountry(d) {
     activeCountry(d.properties.name)
     updateSidebar()
     button1.style.visibility = 'visible'
-    button2.style.visibility = 'visible'
   }
 }
 
@@ -300,7 +296,7 @@ function initSidebar() {
   var parent = document.getElementById('info-text')
   parent.innerText = startPageText
   parent.innerHTML +=
-    '<br /><br /><i><b>The map is interactive. You can  you the slider to select different years and click on specific countries.</b></i>'
+  '<br /><br /><i><b>*Note: The map is interactive. You can use the slider to select different years and select specific countries.</b></i>'
 
   cTitle = document.getElementById('country-title')
   cTitle.innerText = 'Country details'
@@ -315,8 +311,8 @@ function reset() {
   selectedCountry = null
   initSidebar()
   reFillMap()
-  
 }
+
 
 var chart = bb.generate({
   size: {
@@ -326,12 +322,12 @@ var chart = bb.generate({
   data: {
     x: "x",
     columns: [
-	["x", 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020],
-["China",41.9,41.3,40.6,40,39.4,39.2,39.1,39.1,39.1,39.1],
-["India",35,35.1,35.1,35.1,35.1,35.1,35.1,35.1,35.1,35.1],
+  ["x", 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020],
 ["Luxembourg",32,32,32.7,33,32.9,33.3,33.8,33.8,33.8,33.8],
 ["Ireland",32.9,32.8,32.7,32.4,32.2,31.8,31.8,31.8,31.8,31.8],
 ["Qatar",40,40,40,40,40,40,40,40,40,40],
+["China",41.9,41.3,40.6,40,39.4,39.2,39.1,39.1,39.1,39.1],
+["India",35,35.1,35.1,35.1,35.1,35.1,35.1,35.1,35.1,35.1],
 ["Liberia",34.6,34.2,33.8,33.5,33.3,33.2,33.2,33.2,33.2,33.2],
 ["Ethiopia",33.5,34.5,35.5,36.7,37.7,38.4,38.8,39.1,39.1,39.1],
 ["Niger",33.2,33,33.1,33.7,34.1,34.3,34.3,34.3,34.3,34.3],
@@ -347,12 +343,11 @@ var chart = bb.generate({
       Niger: "#CC0000"
     },
     color: function(color, d) {
-	// d will be "id" when called for legends
-	return (d.id && d.id === "data3") ?
-		d3.rgb(color).darker(d.value / 150).toString() : color;
+  // d will be "id" when called for legends
+  return (d.id && d.id === "data3") ?
+    d3.rgb(color).darker(d.value / 150).toString() : color;
    }
   },
   
   bindto: "#lineChart"
 });
-
