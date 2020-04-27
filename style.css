@@ -280,11 +280,26 @@ main .map {
   font-weight: bold;
   visibility: hidden;
 }
+.float{
+	position:fixed;
+	width:300px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color: #fb607f;
+	color:white;
+	border-radius:50px;
+	text-align:center;
+	box-shadow: 2px 2px 3px #999;
+}
 
+.my-float{
+	margin-top:20px;
+}
 #button2 {
   position: absolute;
   left: 1px;
-  margin-bottom: 490px;
+  margin-bottom: 50%;
   cursor: pointer;
   background-color:  rgb(255, 255, 255);
   color: black;
